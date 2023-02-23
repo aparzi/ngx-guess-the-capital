@@ -1,2 +1,12 @@
+<router-outlet></router-outlet>
+
 <!-- Toolbar -->
 <app-toolbar></app-toolbar>
+
+<div class="content" role="main">
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+    <p-dropdown [options]="capitals" [(ngModel)]="selectedCapital" placeholder="Select..." [filter]="true"
+      [resetFilterOnHide]="true" [style]="{width: '100%'}" [showClear]="true"></p-dropdown>
+  </div>
+</div>
