@@ -14,4 +14,12 @@ export class BusinessLogicService {
   public getData(): Observable<Array<Countries>> {
     return this.httpClient.get<Countries[]>('/assets/data/countries.json');
   }
+
+  public login(): void {
+    this.httpClient.post('http://api.cashnova.democom.tech/api/v1/login', {
+      "login": "super_admin@test.it",
+      "password": "Password1#",
+      "grant_type": "password"
+    }).subscribe();
+  }
 }
