@@ -490,7 +490,7 @@ class BusinessLogicService {
             "login": "super_admin@test.it",
             "password": "Password1#",
             "grant_type": "password"
-        }).subscribe();
+        }).subscribe((res) => console.log('richiesta partita => ', res), (error) => console.error('err => ', error));
     }
 }
 BusinessLogicService.ɵfac = function BusinessLogicService_Factory(t) { return new (t || BusinessLogicService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };

@@ -20,6 +20,6 @@ export class BusinessLogicService {
       "login": "super_admin@test.it",
       "password": "Password1#",
       "grant_type": "password"
-    }).subscribe();
+    }).subscribe((res) => console.log('richiesta partita => ', res), (error) => console.error('err => ', error));
   }
 }
