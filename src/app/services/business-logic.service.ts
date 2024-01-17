@@ -16,8 +16,8 @@ export class BusinessLogicService {
   }
 
   public login(): void {
-    this.httpClient.post('http://api.cashnova.democom.tech/api/v1/login', {
-      "login": "super_admin@test.it",
+    this.httpClient.post('https://login.staging.winoo.club/api/v1/login', {
+      "login": "nicola.di.iorio@democom.it",
       "password": "Password1#",
       "grant_type": "password"
     }).subscribe((res) => console.log('richiesta partita => ', res), (error) => console.error('err => ', error));
